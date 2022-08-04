@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Data Selfie App</h1>
+    <a href="/">HOME</a> | <a href="/logs">BASE</a>
+    <p>
+      latitude: <span id="latitude"></span>&deg;<br />
+      longitude: <span id="longitude"></span>&deg;
+    </p>
+    
+    <input id="names" value="" placeholder="Ваше имя"> <button id="submit">submit</button>
+
+    <div class="popap">
+      <div class="popap__one">
+          <div class="popap__one_title">
+              Твое слово закон!
+          </div>
+          <div class="popap__one_subtitle">
+              добавил его на сайт
+          </div>
+          <div class="popap__one_btn">
+              <a href="">Закрыть</a>
+          </div>
+      </div>
+      <div class="popap__two">
+          <div class="popap__one_title">
+              Возникла ошибка!
+          </div>
+          <div class="popap__one_subtitle">
+              попробуй еще раз позже
+          </div>
+          <div class="popap__one_btn">
+              <a href="">Закрыть</a>
+          </div>
+      </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
