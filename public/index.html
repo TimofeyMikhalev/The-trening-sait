@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <h1>Data Selfie App</h1>
@@ -18,10 +19,12 @@
       longitude: <span id="longitude"></span>&deg;
     </p>
     
-    <input id="names" value="" placeholder="Ваше имя"> <button id="submit">submit</button>
+    <form class="add">
+        <input id="names" value="" placeholder="Ваше имя" name="names"> <button id="submit">submit</button>
+    </form>
 
     <div class="popap">
-      <div class="popap__one">
+        <div class="popap__one">
           <div class="popap__one_title">
               Твое слово закон!
           </div>
@@ -44,7 +47,9 @@
           </div>
       </div>
     </div>
-
-    <script src="sketch.js"></script>
+    
+    <script type="module" src="sketch.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js"></script> -->
 </body>
 </html>

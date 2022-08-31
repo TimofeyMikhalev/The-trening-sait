@@ -3,25 +3,26 @@ const button = document.getElementById("submit");
 const popapOne = document.querySelector('.popap__one');
 const popapTwo = document.querySelector('.popap__two');
 
+
 button.addEventListener("click", async (event) => {
 const names = document.getElementById('names').value;
 
-if(names.search(/\d/) != -1 ){
-    console.log('Error');
-    popapTwo.style.display = "flex";
-    return false;
-} else {
-    popapOne.style.display = "flex";
-}
+    if(names.search(/\d/) != -1 ){
+        console.log('Error');
+        popapTwo.style.display = "flex";
+        return false;
+    } else {
+        popapOne.style.display = "flex";
+    }
 
-const data = { lat, lon, names};
-const options = {
-    method: "POST",
-    headers: {
-    "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-};
+    const data = { lat, lon, names};
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    };
 
 
 const response = await fetch("/api", options);
@@ -42,3 +43,4 @@ navigator.geolocation.getCurrentPosition(async (position) => {
 } else {
     console.log("geolocation not available");
 }
+
